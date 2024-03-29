@@ -1,0 +1,54 @@
+/* Navbar styles */
+.custom-bg-orange {
+    background-color: #ffb81f;
+}
+
+  
+.navbar {
+    background-color: orange; /* Green background */
+    transition: background-color 0.5s ease; /* Smooth transition */
+}
+
+.navbar-brand, .nav-link {
+    color: rgb(0, 0, 0) !important; /* White text */
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* White toggler icon */
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: #FFD700 !important; /* Yellow on hover */
+}
+
+.dropdown-menu {
+    background-color: #af904c; /* Green dropdown menu */
+}
+
+.dropdown-item {
+    color: white !important; /* White dropdown item text */
+}
+
+.dropdown-item:hover {
+    background-color: #FFD700; /* Yellow on hover */
+}
+
+/* Animation for navbar */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #4CAF50; }
+    50% { box-shadow: 0 0 20px #FFD700; }
+    100% { box-shadow: 0 0 10px #4CAF50; }
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add more animations or styles as needed */

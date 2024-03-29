@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Seekers Community</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+
+        /* Add your custom styles here */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .left-section {
+            width: 45%;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container img {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .chat-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 400px; 
+            overflow-y: scroll;
+            border-radius: 10px;
+        }
+
+        .chat-container div {
+            margin-bottom: 10px;
+        }
+
+        .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+        /* Media Query for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+            }
+        }
+        /* Custom styles for chat section */
+.right-section {
+    width: 55%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #FF5733;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-content {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e9ecef;
+}
+
+.chat-input {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.chat-input button {
+    margin-left: 10px;
+}
+body {
+    background-image: url('https://imgs.search.brave.com/imETVUpjydK3rguB22G2etjdrQzMYvhd2reNpoXCKzs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNS8x/MC8zMC8yMC8xMy9z/dW5yaXNlLTEwMTQ3/MTJfXzM0MC5qcGc');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">The Return Journey</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">5000 Rupee Traveller</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Itinerary
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="left-section">
+            <h2>Popular Photos</h2>
+            <div id="slideshow" class="slideshow-container">
+                <img src="https://imgs.search.brave.com/DZm3Jl0PGMqwOY1jmn4JuG_iyYoqfeIMb9L4YtBMcYE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/b2Fycy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjIvMDgv/T3V0ZG9vcnN5LURp/dmEtd2ViLmpwZw" alt="Slideshow Image 1">
+                <img src="https://imgs.search.brave.com/SDCupbXCtNwEhFxkefPCGCKfxm2IPLRZN3F-Ih7yj3o/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/bm9tYWRhc2F1cnVz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNS8wNC9KYXp6/YS1CdW5neS1GZWF0/dXJlLmpwZw" alt="Slideshow Image 2">
+                <img src="https://imgs.search.brave.com/xtD9iz1NdbIgoyvQqLY_yscPt3rhi8G8pzV3p-50Hvk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/dHJpcHNhdnZ5LmNv/bS90aG1iL1dFVm05/X1lJS3JLdDQ1NnMz/NGVlcm8xSEVBdz0v/MTUwMHgwL2ZpbHRl/cnM6bm9fdXBzY2Fs/ZSgpOm1heF9ieXRl/cygxNTAwMDApOnN0/cmlwX2ljYygpL0dl/dHR5SW1hZ2VzLTE1/OTE1MTYwOS01YWYz/MzQwMThlMWI2ZTAw/MzYwMTRlOGQuanBn" alt="Slideshow Image 3">
+                <img src="https://imgs.search.brave.com/2UK8kal-SuGtWZ9BFhry1PakO9Sb6Gp27JBXJ6kPYaE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/dHJpcHNhdnZ5LmNv/bS90aG1iL19TYXBD/VmFPeE9rOHNqYVd2/bFNvVXdrZGlyVT0v/MTUwMHgwL2ZpbHRl/cnM6bm9fdXBzY2Fs/ZSgpOm1heF9ieXRl/cygxNTAwMDApOnN0/cmlwX2ljYygpL0dl/dHR5SW1hZ2VzLTcz/NTg4NDAzNy01YWYz/MzkwZTMxMjgzNDAw/Mzc1MTg5ZDQuanBn" alt="">
+                <img src="https://imgs.search.brave.com/2VavrHdARHbcCDkpZOXhuD9QYAwBo2PHPzyVts0UdS8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9yYWZ0/cmVrLmNvbS93cC1j/b250ZW50L3RoZW1l/cy9yYWZ0cmVrL2lt/Zy9yYWZ0cmVrX2lu/ZGV4X2JnLnBuZw" alt="">
+                <img src="https://imgs.search.brave.com/-6VYU6827pI7-ld7-A9jwx3sth-x8PqlTWZ0wI7ZwVI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vZW5jaGFudGlu/Zy9xXzcwLGZfYXV0/byxjX2ZpdCxkcHJf/MixnX3NvdXRoX3dl/c3Qsd183MDAsaF80/MDAvZXhvZHVzLXdl/Yi8yMDIzLzA5L1By/ZW1pdW0tMDMuanBn" alt="">
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Discussion Chats</h2>
+            <div class="chat-container">
+                <!-- Sample chat messages with avatars -->
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-message">
+                        <span class="user-avatar" style="background-image: url('https://imgs.search.brave.com/CQCjkVJlfATNsXy366S6j0IvS8u0FMIlEhtKiPzp--0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zMy5l/dS13ZXN0LTEuYW1h/em9uYXdzLmNvbS9z/aG93YXJvdW5kLmJs/b2cvMjAxNy9PY3Qv/NzhfZXZlcnlmb290/c3RlcGFuZGFkdmVu/dHVyZV9fd3d3X2V2/ZXJ5Zm9vdHN0ZXBh/bmFkdmVudHVyZV9j/b20tMTUwNjkzNTg2/Nzk4NS5qcGc')";></span>
+                        <div class="message-content">Hello adventurers!</div>
+                    </div>
+                    <div class="chat-message">
+                        <span class="user-avatar" style="background-image: url('https://imgs.search.brave.com/JO6KLSd0-U-zFJfUOktyuJVaWthgb4rACS7DSlIF63M/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIw/MDkwMTI4Ny9waG90/by95b3VuZy1jYXN1/YWwtZmVtYWxlLXRy/YXZlbGVyLXdpdGgt/c3VpdGNhc2UtYXQt/YWlycG9ydC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SkpV/a2NZSnJ3Wi1IVnBX/UFNscjgwc2c3eWZJ/bGR1NXpEcWoxM3pO/Um5kVT0')"></span>
+                        <div class="message-content">Hi everyone! Excited for the next trip?</div>
+                    </div>
+                    <div class="chat-message">
+                        <span class="user-avatar" style="background-image: url('https://imgs.search.brave.com/vYJ6V6mZhcHp9vLKLY7ZKEV9Kna7EVH0IXPxsWh3cqU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/dHlsaXNoLXRyYXZl/bGxlci13YWxraW5n/LWRvd24tYnJpZGdl/XzIzLTIxNDg1ODg1/MDEuanBnP3NpemU9/NjI2JmV4dD1qcGc');"></span>
+                        <div class="message-content">I can't wait to explore new places with you all!</div>
+                    </div>
+                    <!-- Add more chat messages as needed -->
+                </div>
+        
+                <!-- Sample chat input -->
+                <div class="chat-input">
+                    <input type="text" id="messageInput" class="form-control" placeholder="Type your message...">
+                    <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        function sendMessage() {
+    var messageInput = document.getElementById("messageInput");
+    var message = messageInput.value.trim();
+
+    if (message !== "") {
+        var chatMessages = document.getElementById("chatMessages");
+
+        var chatMessage = document.createElement("div");
+        chatMessage.className = "chat-message";
+        
+        var userAvatar = document.createElement("span");
+        userAvatar.className = "user-avatar";
+        userAvatar.style.backgroundImage = "url('https://imgs.search.brave.com/H31-wr8-GWzwYVqbQnGMh3kf2fzuXDIKj6kfrXTHACI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/Ny8xNi8xNi8wOC9p/c2xhbmQtMzU0MjI5/MF82NDAuanBn')";
+        chatMessage.appendChild(userAvatar);
+
+        var messageContent = document.createElement("div");
+        messageContent.className = "message-content";
+        messageContent.textContent = "Me: " + message;
+        chatMessage.appendChild(messageContent);
+
+        chatMessages.appendChild(chatMessage);
+        
+        // Clear the input after sending message
+        messageInput.value = "";
+    }
+}
+
+        // Slideshow logic
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slideshow-container")[0].getElementsByTagName("img");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        showSlides(function () {
+    showSlides();
+})();
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

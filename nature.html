@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Lovers Community</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .left-section {
+            width: 45%;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 55%;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .chat-container {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-message {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #64B5F6; /* Light Blue */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .message-content {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #e9ecef;
+        }
+
+        .chat-input {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+
+        .chat-input button {
+            margin-left: 10px;
+        }
+
+        body {
+            background-image: url('https://imgs.search.brave.com/YmIwmwbkoxIf-BxGPdDtpTy-LEniElEPT0rNdltii6g/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/YmhnLmNvbS90aG1i/L0o4UmNmcExZNEI1/amllOHVNUjZXWVhE/empfaz0vMjgyeDE4/OC9maWx0ZXJzOm5v/X3Vwc2NhbGUoKTpz/dHJpcF9pY2MoKS9H/ZXR0eUltYWdlcy01/Nzk4NTgxODQtMmI2/MDg3YzQzMWM5NGEx/Yzk5YTg0MDNjNGQ2/YjViODMuanBn');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            filter: brightness(90%);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">The Return Journey</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">5000 Rupee Traveller</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Itinerary
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="left-section">
+            <h2 class="text-light">Nature's Beauty</h2>
+            <div id="slideshow" class="slideshow-container">
+                <img src="https://imgs.search.brave.com/fATPDK5FWTpIvdEv7GDOnTE6tbwwBnxN5PQcp42jYUc/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5qaW1jZG4uY29t/L2FwcC9jbXMvaW1h/Z2UvdHJhbnNmL25v/bmUvcGF0aC9zYTY1/NDk2MDdjNzhmNWMx/MS9pbWFnZS9pMDFh/ZWY5Yjc2MGYzYjBh/NS92ZXJzaW9uLzE1/NTY5ODI4NjMvbWFs/dGEtYmVzdC1kZXN0/aW5hdGlvbnMtZm9y/LW5hdHVyZS1sb3Zl/cnMuanBn" alt="">
+                <img src="https://imgs.search.brave.com/cSn66VTsYeyDvBiTqkQCHhrDjaPytv35nEUmJsSh41M/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/dHJlZWh1Z2dlci5j/b20vdGhtYi80NWh3/TUd6NlRpSWN1OVhn/SG90MDNJZ0FNRDA9/LzE1MDB4MC9maWx0/ZXJzOm5vX3Vwc2Nh/bGUoKTptYXhfYnl0/ZXMoMTUwMDAwKTpz/dHJpcF9pY2MoKS9K/YWNrc29uLWRkZmMx/MTI0MzdmMjRjNGNh/MzU5NzAyOTRiMWEw/ZDkyLmpwZw" alt="">
+                <img src="https://imgs.search.brave.com/e0-cg0eDl7eZ9pUhd1uHQUoQbFY9FggPjdAUuNAnVc8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90b3Vy/aXN0ZWFyLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMi8w/MS9yZWR3b2RzLW5h/dGlvbmFsLXBhcmsu/anBn" alt="">
+                <img src="https://imgs.search.brave.com/s-0yMIcX8n52I9DoKd4Enz9xyuZEByYYOPlY8fi7-bk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5qaW1jZG4uY29t/L2FwcC9jbXMvaW1h/Z2UvdHJhbnNmL25v/bmUvcGF0aC9zYTY1/NDk2MDdjNzhmNWMx/MS9pbWFnZS9pZDA5/NWJhNWY2ZTEzNDYw/My92ZXJzaW9uLzE1/NTY5ODIxNjkvc2Fh/bGJhY2gtYXVzdHJp/YS1iZXN0LWRlc3Rp/bmF0aW9ucy1mb3It/bmF0dXJlLWxvdmVy/cy5qcGc" alt="">
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Chat with Nature Enthusiasts</h2>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-message">
+                        <span class="user-avatar" style="background-image: url('https://imgs.search.brave.com/H31-wr8-GWzwYVqbQnGMh3kf2fzuXDIKj6kfrXTHACI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/Ny8xNi8xNi8wOC9p/c2xhbmQtMzU0MjI5/MF82NDAuanBn')";></span>
+                        <div class="message-content">Hello nature lovers!</div>
+                    </div>
+                    <div class="chat-message">
+                        <span class="user-avatar" style="background-image: url('https://imgs.search.brave.com/JO6KLSd0-U-zFJfUOktyuJVaWthgb4rACS7DSlIF63M/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIw/MDkwMTI4Ny9waG90/by95b3VuZy1jYXN1/YWwtZmVtYWxlLXRy/YXZlbGVyLXdpdGgt/c3VpdGNhc2UtYXQt/YWlycG9ydC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SkpV/a2NZSnJ3Wi1IVnBX/UFNscjgwc2c3eWZJ/bGR1NXpEcWoxM3pO/Um5kVT0')"></span>
+                        <div class="message-content">Let's share our favorite nature spots!</div>
+                    </div>
+                    <div class="chat-message">
+                        <span class="user-avatar" style="background-image: url('https://imgs.search.brave.com/vYJ6V6mZhcHp9vLKLY7ZKEV9Kna7EVH0IXPxsWh3cqU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/dHlsaXNoLXRyYXZl/bGxlci13YWxraW5n/LWRvd24tYnJpZGdl/XzIzLTIxNDg1ODg1/MDEuanBnP3NpemU9/NjI2JmV4dD1qcGc');"></span>
+                        <div class="message-content">I found an amazing waterfall last week!</div>
+                    </div>
+                    <!-- Add more chat messages as needed -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" class="form-control" placeholder="Type your message...">
+                    <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("messageInput");
+            var message = messageInput.value.trim();
+
+            if (message !== "") {
+                var chatMessages = document.getElementById("chatMessages");
+
+                var chatMessage = document.createElement("div");
+                chatMessage.className = "chat-message";
+
+                var userAvatar = document.createElement("span");
+                userAvatar.className = "user-avatar";
+                userAvatar.style.backgroundImage = "url('https://imgs.search.brave.com/H31-wr8-GWzwYVqbQnGMh3kf2fzuXDIKj6kfrXTHACI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/Ny8xNi8xNi8wOC9p/c2xhbmQtMzU0MjI5/MF82NDAuanBn')";
+                chatMessage.appendChild(userAvatar);
+
+                var messageContent = document.createElement("div");
+                messageContent.className = "message-content";
+                messageContent.textContent = "Me: " + message;
+                chatMessage.appendChild(messageContent);
+
+                chatMessages.appendChild(chatMessage);
+
+                // Clear the input after sending message
+                messageInput.value = "";
+            }
+        }
+
+        // Slideshow logic
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slideshow-container")[0].getElementsByTagName("img");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        showSlides();
+    </script>
+</body>
+
+</html>
